@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GeoCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lZg-S8-U4s">
+                                <rect key="frame" x="16" y="28" width="343" height="68"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TCy-Wa-77S">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter latitude for p1" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tTr-XP-a9e" customClass="GeoLat1Field" customModule="GeoCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter longitude for p1" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XNl-d5-r0F" customClass="GeoLat1Field" customModule="GeoCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="175.5" y="0.0" width="167.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PpR-bo-gIu">
+                                        <rect key="frame" x="0.0" y="38" width="343" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter latitude for p2" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="C27-Ze-Vr5" customClass="GeoLat1Field" customModule="GeoCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter longitude for p2" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Mvd-eO-fZA" customClass="GeoLat1Field" customModule="GeoCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="175.5" y="0.0" width="167.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nL-eN-mWv" customClass="GeoCalcButton" customModule="GeoCalculator" customModuleProvider="target">
+                                <rect key="frame" x="16" y="104" width="125" height="30"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="liP-Xa-A5S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dP-E1-yDW" customClass="GeoCalcButton" customModule="GeoCalculator" customModuleProvider="target">
+                                <rect key="frame" x="234" y="104" width="125" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="heg-bA-kze"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FP-7k-w4W" customClass="GeoDistLabel" customModule="GeoCalculator" customModuleProvider="target">
+                                <rect key="frame" x="16" y="142" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bearing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wJ-LB-b7y" customClass="GeoDistLabel" customModule="GeoCalculator" customModuleProvider="target">
+                                <rect key="frame" x="16" y="171" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUc-gh-Lmj" customClass="GeoCalcButton" customModule="GeoCalculator" customModuleProvider="target">
+                                <rect key="frame" x="125" y="629" width="125" height="30"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="TY0-94-ZcH" kind="show" identifier="settingsSegue" id="EI8-Vp-ZyL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2FP-7k-w4W" firstAttribute="trailing" secondItem="1dP-E1-yDW" secondAttribute="trailing" id="04H-g5-VYd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uUc-gh-Lmj" secondAttribute="bottom" constant="8" id="30j-yr-BMw"/>
+                            <constraint firstItem="9nL-eN-mWv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:3" id="DBO-ZA-FK8"/>
+                            <constraint firstItem="9nL-eN-mWv" firstAttribute="top" secondItem="C27-Ze-Vr5" secondAttribute="bottom" constant="8" id="Dpq-Pv-tZl"/>
+                            <constraint firstItem="lZg-S8-U4s" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="F6n-wt-XJG"/>
+                            <constraint firstItem="lZg-S8-U4s" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="JHV-I8-siC"/>
+                            <constraint firstItem="lZg-S8-U4s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LAJ-cl-x5V"/>
+                            <constraint firstItem="1dP-E1-yDW" firstAttribute="top" secondItem="Mvd-eO-fZA" secondAttribute="bottom" constant="8" id="Mgq-J5-48P"/>
+                            <constraint firstItem="lZg-S8-U4s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ras-ye-ikj"/>
+                            <constraint firstItem="lZg-S8-U4s" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ShR-fh-8NW"/>
+                            <constraint firstItem="2FP-7k-w4W" firstAttribute="leading" secondItem="9nL-eN-mWv" secondAttribute="leading" id="WMe-k0-Q4o"/>
+                            <constraint firstItem="uUc-gh-Lmj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YAq-yx-D2N"/>
+                            <constraint firstItem="uUc-gh-Lmj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:3" id="asH-Ds-1ih"/>
+                            <constraint firstItem="1dP-E1-yDW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:3" id="fog-7x-a2u"/>
+                            <constraint firstItem="1dP-E1-yDW" firstAttribute="trailing" secondItem="Mvd-eO-fZA" secondAttribute="trailing" id="iLz-3d-QUe"/>
+                            <constraint firstItem="4wJ-LB-b7y" firstAttribute="leading" secondItem="2FP-7k-w4W" secondAttribute="leading" id="q48-ai-uPC"/>
+                            <constraint firstItem="4wJ-LB-b7y" firstAttribute="trailing" secondItem="2FP-7k-w4W" secondAttribute="trailing" id="svW-KA-SFf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lZg-S8-U4s" secondAttribute="trailing" id="vBE-bs-zuy"/>
+                            <constraint firstItem="9nL-eN-mWv" firstAttribute="leading" secondItem="C27-Ze-Vr5" secondAttribute="leading" id="vBT-7C-4Rp"/>
+                            <constraint firstItem="4wJ-LB-b7y" firstAttribute="top" secondItem="2FP-7k-w4W" secondAttribute="bottom" constant="8" id="vvb-y2-pzP"/>
+                            <constraint firstItem="2FP-7k-w4W" firstAttribute="top" secondItem="9nL-eN-mWv" secondAttribute="bottom" constant="8" id="xo3-Bp-eCh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bearingLabel" destination="4wJ-LB-b7y" id="o4U-BG-hxP"/>
+                        <outlet property="distanceLabel" destination="2FP-7k-w4W" id="eJB-IY-8xF"/>
+                        <outlet property="p1Lat" destination="tTr-XP-a9e" id="raS-W8-oJL"/>
+                        <outlet property="p1Lng" destination="XNl-d5-r0F" id="e4n-BD-K5z"/>
+                        <outlet property="p2Lat" destination="C27-Ze-Vr5" id="eES-Mn-tMo"/>
+                        <outlet property="p2Lng" destination="Mvd-eO-fZA" id="SoF-FC-QfE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="DNv-8k-rWr">
+            <objects>
+                <viewController title="Settings" id="fE3-0b-XxC" customClass="SettingsViewController" customModule="GeoCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R6S-8E-JEl"/>
+                        <viewControllerLayoutGuide type="bottom" id="IfA-xN-lpU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ThZ-bb-5Cc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huV-vF-myg">
+                                <rect key="frame" x="0.0" y="487" width="375" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="twf-ek-FxI"/>
+                                </constraints>
+                            </pickerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="8rg-ER-9O6">
+                                <rect key="frame" x="20" y="72" width="335" height="41"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qW-RZ-H34">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance Units:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQC-2v-ovr" customClass="GeoDistLabel" customModule="GeoCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kilometers" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5V-rX-K7K" customClass="GeoDistLabel" customModule="GeoCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="167.5" y="0.0" width="167.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="GQC-2v-ovr" firstAttribute="width" secondItem="a5V-rX-K7K" secondAttribute="width" id="foZ-HY-LTu"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0M-S2-lUm">
+                                        <rect key="frame" x="0.0" y="20.5" width="335" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bearing Units:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqO-yK-6CE" customClass="GeoDistLabel" customModule="GeoCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Degrees" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IoP-Z9-NT6" customClass="GeoDistLabel" customModule="GeoCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="167.5" y="0.0" width="167.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="VqO-yK-6CE" firstAttribute="width" secondItem="IoP-Z9-NT6" secondAttribute="width" id="e6z-hd-IgO"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="a5V-rX-K7K" secondAttribute="trailing" id="1pJ-KP-t2n"/>
+                                    <constraint firstAttribute="trailing" secondItem="IoP-Z9-NT6" secondAttribute="trailing" id="WMU-9e-Zcv"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IfA-xN-lpU" firstAttribute="top" secondItem="huV-vF-myg" secondAttribute="bottom" id="AD2-qF-e73"/>
+                            <constraint firstItem="8rg-ER-9O6" firstAttribute="leading" secondItem="ThZ-bb-5Cc" secondAttribute="leading" constant="20" symbolic="YES" id="KUU-h4-15K"/>
+                            <constraint firstItem="8rg-ER-9O6" firstAttribute="top" secondItem="R6S-8E-JEl" secondAttribute="bottom" constant="8" id="XXo-xF-Guu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="huV-vF-myg" secondAttribute="trailing" constant="-16" id="aYP-mi-ve4"/>
+                            <constraint firstItem="huV-vF-myg" firstAttribute="leading" secondItem="ThZ-bb-5Cc" secondAttribute="leadingMargin" constant="-16" id="abh-yf-lXE"/>
+                            <constraint firstAttribute="trailing" secondItem="8rg-ER-9O6" secondAttribute="trailing" constant="20" symbolic="YES" id="sRM-IR-uql"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="7Jg-JT-Hwz">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="b3u-EF-Lr4">
+                            <connections>
+                                <action selector="cancelPressed:" destination="fE3-0b-XxC" id="jZ3-PT-8BK"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="nNJ-Fa-ijR">
+                            <connections>
+                                <action selector="savePressed:" destination="fE3-0b-XxC" id="bmJ-ey-GxE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bearingUnits" destination="IoP-Z9-NT6" id="rgf-V5-fjL"/>
+                        <outlet property="distanceUnits" destination="a5V-rX-K7K" id="K5H-uZ-6lk"/>
+                        <outlet property="picker" destination="huV-vF-myg" id="O6v-nJ-zdQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aT7-RT-VuZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1840.8" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qWr-Bs-PpX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TY0-94-ZcH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iMq-mw-ckH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fE3-0b-XxC" kind="relationship" relationship="rootViewController" id="3re-a5-Wxk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Igj-Mt-ZAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="901.60000000000002" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
